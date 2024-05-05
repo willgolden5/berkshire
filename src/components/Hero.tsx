@@ -17,10 +17,10 @@ const Hero = forwardRef<HTMLDivElement, {}>((_props, ref) => {
               connections that will last for years to come.
             </h1>
             <div className="flex w-full space-x-2">
-              <button className="bg-primary hover:bg-secondary hover:animate-wiggle text-white px-4 w-1/3 py-2 rounded-lg">
+              <button className="bg-primary hover:bg-secondary hover:animate-wiggle text-white px-4 w-full py-2 rounded-lg">
                 Donate
               </button>
-              <button className="bg-secondary hover:bg-primary text-white w-1/3 px-4 py-2 rounded-lg">
+              <button className="bg-secondary hover:bg-primary text-white w-2/3 px-4 py-2 rounded-lg">
                 Learn More
               </button>
             </div>

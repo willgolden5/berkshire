@@ -45,7 +45,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
     >
       <div className="flex items-center align-middle justify-center md:w-[940px]">
         <div className="flex flex-col mr-auto pr-4">
-          <h1 className=" font-bold text-primary hover:text-secondary text-4xl pb-4">
+          <h1 className=" font-bold text-primary hover:text-secondary text-5xl pb-4">
             Our Mission Statement:
           </h1>
           <div className="text-sm">
