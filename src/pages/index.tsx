@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Footer from "../components/Footer";
 
 const IndexPage: React.FC<PageProps> = () => {
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -13,6 +14,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Navbar homeRef={homeRef} projectsRef={aboutRef} />
         <Hero ref={homeRef} />
         <About ref={aboutRef} />
+        <Footer />
       </div>
     </main>
   );

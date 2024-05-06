@@ -57,7 +57,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
             </p>
 
             <p className="font-light pb-2">
-              <p className="hover:text-light-green">
+              <p className="hover:text-secondary">
                 We are entirely funded by private donations,
               </p>{" "}
               allowing us to offer the program to participants free of charge
