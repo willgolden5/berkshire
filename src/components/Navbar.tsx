@@ -49,10 +49,7 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
           >
             About
           </p>
-          <p
-            onClick={handleAboutClick}
-            className="flex items-center justify-center hover:animate-wiggle hover:text-secondary text-xl m500:text-xl cursor-pointer"
-          >
+          <p className="flex items-center justify-center hover:animate-wiggle hover:text-secondary text-xl m500:text-xl cursor-pointer">
             Contact
           </p>
           <p className="flex items-center justify-center hover:animate-wiggle hover:text-secondary text-xl m500:text-xl cursor-pointer">

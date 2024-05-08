@@ -30,6 +30,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
     (node: { file: { url: string }; title: string; description: string }) =>
       node.file.url
   );
+
   const settings = {
     dots: true,
     arrows: false,
@@ -38,12 +39,13 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
     slidesToShow: 2,
     slidesToScroll: 1,
   };
+
   return (
     <div
       ref={ref}
       className="flex flex-col h-screen w-full items-center justify-center"
     >
-      <div className="flex items-center align-middle justify-center md:w-[940px]">
+      <div className="flex flex-col lg:flex-row items-center align-middle justify-center w-[340px] md:w-[940px]">
         <div className="flex flex-col mr-auto pr-4">
           <h1 className=" font-bold text-primary hover:text-secondary text-5xl pb-4">
             Our Mission Statement:
@@ -55,7 +57,6 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
               individuals of all abilities to spend a life-changing week
               together in the Berkshires.
             </p>
-
             <p className="font-light pb-2">
               <p className="hover:text-secondary">
                 We are entirely funded by private donations,
@@ -70,7 +71,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
             </button>
           </div>
         </div>
-        <div className="pl-4 ml-auto w-2/3">
+        <div className="pl-4 hidden md:block ml-auto w-2/3">
           <Slider {...settings}>
             {imageLinks.map((link: string) => (
               <div className="max-h-[370px]">

@@ -10,9 +10,9 @@ const IndexPage: React.FC<PageProps> = () => {
   const homeRef = useRef<HTMLDivElement | null>(null);
   return (
     <main>
-      <div className="flex flex-col w-full justify-start scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-primary scrollbar-thumb:!rounded scrollbar-thumb:!bg-primary scrollbar-track:!rounded bg-white scroll-primary">
+      <div className="flex flex-col w-full justify-start">
         <Navbar homeRef={homeRef} projectsRef={aboutRef} />
-        <Hero ref={homeRef} />
+        <Hero ref={homeRef} projectsRef={aboutRef} />
         <About ref={aboutRef} />
         <Footer />
       </div>
