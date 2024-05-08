@@ -45,8 +45,8 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(({ projectsRef }, ref) => {
               </button>
             </div>
           </div>
-          <div className="ml-auto w-[400px] hidden lg:block animate-slideIn">
-            <img src="./static/logo.png" />
+          <div className="ml-auto w-[400px] hidden md:block animate-slideIn">
+            <img src="./static/logo.png" alt="berkshire logo" />
           </div>
         </div>
       </div>

@@ -36,7 +36,7 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
         <a className=" w-20 cursor-pointer" onClick={handleHomeClick}>
           <img src="./static/logo.png" />
         </a>
-        <div className="flex space-x-8 px-8">
+        <div className="md:flex hidden space-x-8 px-8">
           <p
             onClick={handleHomeClick}
             className="flex items-center justify-center hover:animate-wiggle hover:text-secondary text-xl m500:text-xl cursor-pointer"
@@ -49,9 +49,12 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
           >
             About
           </p>
-          <p className="flex items-center justify-center hover:animate-wiggle hover:text-secondary text-xl m500:text-xl cursor-pointer">
+          <a
+            href="mailto:theberkshireproject2020@gmail.com/?subject=Hello%20Berkshire%20Team!"
+            className="flex items-center justify-center hover:animate-wiggle hover:text-secondary text-xl m500:text-xl cursor-pointer"
+          >
             Contact
-          </p>
+          </a>
           <p className="flex items-center justify-center hover:animate-wiggle hover:text-secondary text-xl m500:text-xl cursor-pointer">
             <a href="https://fundly.com/the-berkshire-project">Donate</a>
           </p>

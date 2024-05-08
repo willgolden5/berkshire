@@ -27,8 +27,9 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
   }, [data]);
 
   const imageLinks = data.allContentfulAsset.nodes.map(
-    (node: { file: { url: string }; title: string; description: string }) =>
-      node.file.url
+    (node: { file: { url: string }; title: string; description: string }) => {
+      return { link: node.file.url, title: node.title };
+    }
   );
 
   const settings = {
@@ -73,9 +74,9 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
         </div>
         <div className="pl-4 hidden md:block ml-auto w-2/3">
           <Slider {...settings}>
-            {imageLinks.map((link: string) => (
+            {imageLinks.map((obj: { link: string; title: string }) => (
               <div className="max-h-[370px]">
-                <img src={link} className="h-[370px]" />
+                <img src={obj.link} className="h-[370px]" alt={obj.title} />
               </div>
             ))}
           </Slider>
