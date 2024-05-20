@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React, { RefObject, forwardRef } from "react";
 
 interface HeroProps {
@@ -5,6 +6,26 @@ interface HeroProps {
 }
 
 const Hero = forwardRef<HTMLDivElement, HeroProps>(({ projectsRef }, ref) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulHeroSection {
+        nodes {
+          title
+          subtitle
+          image {
+            file {
+              url
+              fileName
+              contentType
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  console.log(data.allContentfulHeroSection.nodes[0]);
+
   const handleAboutClick = () => {
     if (projectsRef && projectsRef.current) {
       const elementRect = projectsRef.current.getBoundingClientRect();
@@ -27,11 +48,10 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(({ projectsRef }, ref) => {
         <div className="flex align-middle items-center p-6 w-full">
           <div className="w-full lg:w-1/2">
             <h3 className="text-5xl text-primary font-bold pb-[.3em] hover:text-secondary ">
-              Welcome to the Berkshire Project.
+              {data.allContentfulHeroSection.nodes[0].title}
             </h3>
             <h1 className="font-light text-black text-xl pb-[16px]">
-              An inclusive arts and music based retreat that strives to develop
-              connections that will last for years to come.
+              {data.allContentfulHeroSection.nodes[0].subtitle}
             </h1>
             <div className="flex w-full space-x-2">
               <button className="bg-primary hover:bg-secondary hover:animate-wiggle text-white px-4 w-full py-2 rounded-lg">
@@ -46,7 +66,10 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(({ projectsRef }, ref) => {
             </div>
           </div>
           <div className="ml-auto w-[400px] hidden md:block animate-slideIn">
-            <img src="./static/logo.png" alt="berkshire logo" />
+            <img
+              src={data.allContentfulHeroSection.nodes[0].image.file.url}
+              alt="berkshire logo"
+            />
           </div>
         </div>
       </div>
