@@ -5,7 +5,7 @@ import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 
 const FloatingBar = () => {
   return (
-    <div className="hidden fixed top-20 right-10 z-20 md:flex flex-col items-center space-y-6 p-2">
+    <div className="hidden fixed top-28 right-10 z-20 md:flex flex-col items-center space-y-6 p-2">
       <a
         href="https://www.instagram.com/theberkshireproject2023/"
         target="_blank"
