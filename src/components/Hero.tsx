@@ -24,8 +24,6 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(({ projectsRef }, ref) => {
     }
   `);
 
-  console.log(data.allContentfulHeroSection.nodes[0]);
-
   const handleAboutClick = () => {
     if (projectsRef && projectsRef.current) {
       const elementRect = projectsRef.current.getBoundingClientRect();
