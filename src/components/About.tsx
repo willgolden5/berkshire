@@ -33,11 +33,18 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
 
   const aboutSectionText = data.allContentfulAboutSection.nodes[0];
 
-  const imageLinks = data.allContentfulAsset.nodes.map(
-    (node: { file: { url: string }; title: string; description: string }) => {
-      return { link: node.file.url, title: node.title };
-    }
-  );
+  console.log(data.allContentfulAsset.nodes);
+
+  const imageLinks = data.allContentfulAsset.nodes
+    .filter(
+      (node: { file: { url: string } }) =>
+        !node.file.url.includes("3ICHVIVe8mmjHfDezjWAQt")
+    )
+    .map(
+      (node: { file: { url: string }; title: string; description: string }) => {
+        return { link: node.file.url, title: node.title };
+      }
+    );
 
   const settings = {
     dots: true,
@@ -72,8 +79,12 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
         <div className="pl-4 hidden md:block ml-auto w-2/3">
           <Slider {...settings}>
             {imageLinks.map((obj: { link: string; title: string }) => (
-              <div className="max-h-[370px]">
-                <img src={obj.link} className="h-[370px]" alt={obj.title} />
+              <div className="h-[370px] overflow-hidden">
+                <img
+                  src={obj.link}
+                  className="w-full h-full object-cover px-1"
+                  alt={obj.title}
+                />
               </div>
             ))}
           </Slider>
