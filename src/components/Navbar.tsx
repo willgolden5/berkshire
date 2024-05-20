@@ -34,7 +34,7 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
     <nav className="fixed bg-white left-0 top-0 z-10 mx-auto flex h-18 w-full items-center border-primary border-b-2 px-5 m500:h-16">
       <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between p-1">
         <a className=" w-20 cursor-pointer" onClick={handleHomeClick}>
-          <img src="./static/logo.png" />
+          <img src="./static/logo.png" alt="Navigation Bar Logo" />
         </a>
         <div className="md:flex hidden space-x-8 px-8">
           <p
