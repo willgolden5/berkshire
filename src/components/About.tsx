@@ -60,7 +60,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
       ref={ref}
       className="flex flex-col h-screen w-full items-center justify-center"
     >
-      <div className="flex flex-col lg:flex-row items-center align-middle justify-center w-[340px] md:w-[940px]">
+      <div className="flex flex-col-reverse md:flex-row items-center align-middle justify-center w-[340px] md:w-[940px]">
         <div className="flex flex-col mr-auto pr-4">
           <h1 className=" font-bold text-primary hover:text-secondary text-5xl pb-4">
             {data.allContentfulAboutSection.nodes[0].title}
@@ -76,10 +76,10 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
             </button>
           </div>
         </div>
-        <div className="pl-4 hidden md:block ml-auto w-2/3">
+        <div className="md:pl-4 ml-auto w-full pb-8 md:pb-0 md:w-2/3">
           <Slider {...settings}>
             {imageLinks.map((obj: { link: string; title: string }) => (
-              <div className="h-[370px] overflow-hidden">
+              <div className="h-[300px] md:h-[370px] overflow-hidden">
                 <img
                   src={obj.link}
                   className="w-full h-full object-cover px-1"
