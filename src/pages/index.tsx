@@ -27,6 +27,6 @@ export default IndexPage;
 export const Head: HeadFC = () => (
   <>
     <link rel="icon" href="/favicon.ico" />
-    <title>Home Page</title>
+    <title>The Berkshire Project</title>
   </>
 );
