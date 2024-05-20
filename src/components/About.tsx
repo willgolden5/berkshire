@@ -76,7 +76,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
             </button>
           </div>
         </div>
-        <div className="md:pl-4 ml-auto w-full pb-8 md:pb-0 md:w-2/3">
+        <div className="md:pl-4 ml-auto w-full pb-12 md:pb-0 md:w-2/3">
           <Slider {...settings}>
             {imageLinks.map((obj: { link: string; title: string }) => (
               <div className="h-[300px] md:h-[370px] overflow-hidden">
