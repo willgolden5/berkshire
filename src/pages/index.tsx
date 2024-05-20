@@ -11,6 +11,9 @@ const IndexPage: React.FC<PageProps> = () => {
   const homeRef = useRef<HTMLDivElement | null>(null);
   return (
     <main>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <div className="flex flex-col w-full justify-start">
         <Navbar homeRef={homeRef} projectsRef={aboutRef} />
         <FloatingBar />
