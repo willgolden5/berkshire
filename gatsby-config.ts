@@ -21,6 +21,14 @@ const config: GatsbyConfig = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `The Berkshire Project`,
+        start_url: `/`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
