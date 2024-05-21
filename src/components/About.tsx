@@ -71,7 +71,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
             </p>
           </div>
           <div className="w-full pt-6">
-            <button className="bg-primary hover:bg-secondary hover:animate-wiggle text-white px-4 w-1/3 py-2 rounded-lg w-full">
+            <button className="bg-primary hover:bg-secondary hover:animate-wiggle text-white px-4 py-2 rounded-lg w-full">
               Donate
             </button>
           </div>

@@ -77,7 +77,7 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
             About
           </p>
           <a
-            href="mailto:theberkshireproject2020@gmail.com/?subject=Hello%20Berkshire%20Team!"
+            href="mailto:theberkshireproject2020@gmail.com?subject=Hello%20Berkshire%20Team!"
             className="cursor-pointer hover:text-secondary text-xl"
           >
             Contact
@@ -103,7 +103,7 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
               About
             </p>
             <a
-              href="mailto:theberkshireproject2020@gmail.com/?subject=Hello%20Berkshire%20Team!"
+              href="mailto:theberkshireproject2020@gmail.com?subject=Hello%20Berkshire%20Team!"
               className="cursor-pointer hover:text-secondary text-xl"
             >
               Contact
