@@ -83,7 +83,13 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
             Contact
           </a>
           <p className="cursor-pointer hover:text-secondary text-xl">
-            <a href="https://fundly.com/the-berkshire-project">Donate</a>
+            <a
+              href="https://fundly.com/the-berkshire-project"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate
+            </a>
           </p>
         </div>
       </div>
