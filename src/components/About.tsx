@@ -23,6 +23,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
       allContentfulAboutSection {
         nodes {
           title
+          subtitle
           text {
             raw
           }
@@ -33,7 +34,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
 
   const aboutSectionText = data.allContentfulAboutSection.nodes[0];
 
-  console.log(data.allContentfulAsset.nodes);
+  console.log(data.allContentfulAboutSection.nodes);
 
   const imageLinks = data.allContentfulAsset.nodes
     .filter(
@@ -65,6 +66,9 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
           <h1 className=" font-bold text-primary hover:text-secondary text-5xl pb-4">
             {data.allContentfulAboutSection.nodes[0].title}
           </h1>
+          <h3 className=" font-bold text-primary hover:text-secondary text-lg pb-4">
+            {data.allContentfulAboutSection.nodes[0].subtitle}
+          </h3>
           <div className="text-sm">
             <p className="font-light w-150px pb-2">
               {documentToReactComponents(JSON.parse(aboutSectionText.text.raw))}
@@ -79,7 +83,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
         <div className="md:pl-4 ml-auto w-full pb-12 md:pb-0 md:w-2/3">
           <Slider {...settings}>
             {imageLinks.map((obj: { link: string; title: string }) => (
-              <div className="h-[300px] md:h-[370px] overflow-hidden">
+              <div className="h-[300px] md:h-[400px] overflow-hidden">
                 <img
                   src={obj.link}
                   className="w-full h-full object-cover px-1"

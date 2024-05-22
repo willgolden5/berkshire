@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.slick-dots {
+    bottom: -5em !important;
+  }
+  
