@@ -74,7 +74,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
               {documentToReactComponents(JSON.parse(aboutSectionText.text.raw))}
             </p>
           </div>
-          <div className="w-full pt-6">
+          <div className="w-full pt-2 md:pt-6">
             <button className="bg-primary hover:bg-secondary hover:animate-wiggle text-white px-4 py-2 rounded-lg w-full">
               Donate
             </button>
