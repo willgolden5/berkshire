@@ -5,5 +5,11 @@
 
 .slick-dots {
     bottom: -5em !important;
-  }
+}
+
+@media (max-width: 768px) {
+    .slick-dots {
+        display: none !important;
+    }
+}
   
