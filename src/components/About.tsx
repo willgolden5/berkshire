@@ -34,8 +34,6 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
 
   const aboutSectionText = data.allContentfulAboutSection.nodes[0];
 
-  console.log(data.allContentfulAboutSection.nodes);
-
   const imageLinks = data.allContentfulAsset.nodes
     .filter(
       (node: { file: { url: string } }) =>
