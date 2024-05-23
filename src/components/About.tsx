@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from "react";
+import React, { forwardRef } from "react";
 import Slider from "react-slick";
 import { useStaticQuery, graphql } from "gatsby";
 
