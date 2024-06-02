@@ -5,7 +5,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="mt-4 inset-x-0 bottom-0 bg-white text-center p-4 w-full flex flex-col">
+    <footer className="mt-4 md:mt-0 inset-x-0 bottom-0 bg-white text-center p-4 w-full flex flex-col">
       <div className="flex space-x-8 mr-auto ml-auto pb-2">
         <a
           href="https://www.instagram.com/theberkshireproject2023/"
