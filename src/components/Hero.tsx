@@ -56,6 +56,7 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(({ projectsRef }, ref) => {
                 href="https://fundly.com/the-berkshire-project"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full"
               >
                 <button className="bg-primary hover:bg-secondary hover:animate-wiggle text-white px-4 w-full py-2 rounded-lg">
                   Donate
