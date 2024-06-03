@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { donationURL } from "../utils/constants";
 
 const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
   const data = useStaticQuery(graphql`
@@ -73,11 +74,7 @@ const About = forwardRef<HTMLDivElement, {}>((_props, ref) => {
             </p>
           </div>
           <div className="w-full pt-2 md:pt-6">
-            <a
-              href="https://fundly.com/the-berkshire-project"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={donationURL} target="_blank" rel="noopener noreferrer">
               <button className="bg-primary hover:bg-secondary hover:animate-wiggle text-white px-4 py-2 rounded-lg w-full">
                 Donate
               </button>

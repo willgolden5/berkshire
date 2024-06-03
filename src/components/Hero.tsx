@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { RefObject, forwardRef } from "react";
+import { donationURL } from "../utils/constants";
 
 interface HeroProps {
   projectsRef: RefObject<HTMLElement>;
@@ -53,7 +54,7 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(({ projectsRef }, ref) => {
             </h1>
             <div className="flex w-full space-x-2">
               <a
-                href="https://fundly.com/the-berkshire-project"
+                href={donationURL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full"

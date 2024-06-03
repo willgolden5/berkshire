@@ -2,6 +2,7 @@ import React, { RefObject, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { donationURL } from "../utils/constants";
 
 interface NavbarProps {
   projectsRef: RefObject<HTMLElement>;
@@ -83,11 +84,7 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
             Contact
           </a>
           <p className="cursor-pointer hover:text-secondary text-xl">
-            <a
-              href="https://fundly.com/the-berkshire-project"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={donationURL} target="_blank" rel="noopener noreferrer">
               Donate
             </a>
           </p>
@@ -115,7 +112,7 @@ const Navbar = ({ projectsRef, homeRef }: NavbarProps) => {
               Contact
             </a>
             <p className="cursor-pointer hover:text-secondary text-xl">
-              <a href="https://fundly.com/the-berkshire-project">Donate</a>
+              <a href={donationURL}>Donate</a>
             </p>
           </div>
         </div>
